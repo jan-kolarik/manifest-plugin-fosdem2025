@@ -182,6 +182,110 @@
 			#identify-manifest-arrow {
 				margin-top: -40px;
 			}
+
+			.bootstrap-table {
+				display: flex;
+			}
+
+			.bootstrap-table-column {
+				flex: 50%;
+			}
+
+			.bootstrap-image {
+				width: 150px;
+			}
+
+			.bootstrap-terminal {
+				width: 350px;
+			}
+
+			.terminal-button {
+				height: 16px;
+				width: 16px;
+				display: inline-block;
+				margin-right: 2px;
+				margin-top: 5px;
+
+				&:last-child {
+					margin-right: 10px;
+				}
+
+				&.terminal-button-tabs {
+					background-image: url('img/terminal-tabs.svg');
+					background-repeat: no-repeat;
+					background-size: 10px;
+					background-position: center;
+				}
+
+				&.terminal-button-menu {
+					background-image: url('img/terminal-menu.svg');
+					background-repeat: no-repeat;
+					background-size: 10px;
+					background-position: center;
+				}
+
+				&.terminal-button-close {
+					background-color: #434343;
+					border-radius: 100%;
+					background-image: url('img/terminal-close.svg');
+					background-repeat: no-repeat;
+					background-size: 8px;
+					background-position: center;
+				}
+			}
+			
+			.terminal-section {
+				position: relative;
+				display: block;
+			}
+
+			.terminal-outer {
+				display: inline-block;
+				width: 440px;
+				border-radius: 8px;
+				overflow: hidden;
+				position: relative;
+				font-size: 10px;
+				font-weight: normal;
+				font-family: monospace;
+				.terminal-container {
+					.terminal-header {
+						background-color: #303030;
+						text-align: right;
+						.terminal-controls {
+							display: inline-block;
+							.elem {
+								float: left;
+							}
+						}
+					}
+					.terminal-body {
+						background-color: #1e1e1e;
+						width: 600px;
+						padding: 10px;
+						text-align: left;
+						.terminal-body-inner {
+							min-height: 250px;
+							color: #fff;
+							p {
+								margin: 0 0 4px;
+							}
+							.terminal-user {
+								margin-right: 10px;
+								font-weight: bold;
+							}
+							.keyword-highlight {
+								font-weight: bold;
+								color: #1197c7;
+							}
+						}
+					}
+				}
+			}
+
+			.terminal-small {
+				height: 140px;
+			}
 		</style>
 	</head>
 	<body>
@@ -207,7 +311,7 @@
 					<div class="identify-grid">
 						<div>
 							<img class="identify-main-image" src="img/manifest.png" />
-							<br/>
+							<br>
 							<div data-id="identify-manifest-caption" style="font-size: 20px;"><code>.manifest.yaml</code></div>
 						</div>
 					</div>
@@ -217,36 +321,13 @@
 					<div class="identify-grid">
 						<div>
 							<img class="identify-main-image" src="img/input.png" />
-							<br/>
+							<br>
 							<div style="font-size: 20px;"><code>&nbsp;</code></div>
 						</div>
 						<div data-id="identify-manifest-arrow" id="identify-manifest-arrow">⟶</div>
 						<div>
 							<img class="identify-main-image" src="img/manifest.png" />
-							<br/>
-							<div data-id="identify-manifest-caption" style="font-size: 20px;"><code>.manifest.yaml</code></div>
-						</div>
-					</div>
-				</section>
-				<section data-auto-animate>
-					<h3>Identify Your Packages</h3>
-					<div class="identify-grid">
-						<div class="identify-input-detail">
-							<img src="img/terminal.png" />
-							<br/>
-							<img src="img/file.png" />
-							<br/>
-							<img src="img/camera.png" />
-						</div>
-						<div>
-							<img class="identify-main-image" src="img/input.png" />
-							<br/>
-							<div style="font-size: 20px;"><code>&nbsp;</code></div>
-						</div>
-						<div data-id="identify-manifest-arrow" id="identify-manifest-arrow">⟶</div>
-						<div>
-							<img class="identify-main-image" src="img/manifest.png" />
-							<br/>
+							<br>
 							<div data-id="identify-manifest-caption" style="font-size: 20px;"><code>.manifest.yaml</code></div>
 						</div>
 					</div>
@@ -256,28 +337,516 @@
 					<div class="identify-grid">
 						<div class="identify-input-detail">
 							<img src="img/terminal.png" />
-							<br/>
+							<br>
 							<img src="img/file.png" />
-							<br/>
+							<br>
 							<img src="img/camera.png" />
 						</div>
 						<div>
 							<img class="identify-main-image" src="img/input.png" />
-							<br/>
+							<br>
 							<div style="font-size: 20px;"><code>&nbsp;</code></div>
 						</div>
 						<div data-id="identify-manifest-arrow" id="identify-manifest-arrow">⟶</div>
 						<div>
 							<img class="identify-main-image" src="img/manifest.png" />
-							<br/>
+							<br>
+							<div data-id="identify-manifest-caption" style="font-size: 20px;"><code>.manifest.yaml</code></div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Identify Your Packages</h3>
+					<div class="identify-grid">
+						<div class="identify-input-detail">
+							<img src="img/terminal.png" />
+							<br>
+							<img src="img/file.png" />
+							<br>
+							<img src="img/camera.png" />
+						</div>
+						<div>
+							<img class="identify-main-image" src="img/input.png" />
+							<br>
+							<div style="font-size: 20px;"><code>&nbsp;</code></div>
+						</div>
+						<div data-id="identify-manifest-arrow" id="identify-manifest-arrow">⟶</div>
+						<div>
+							<img class="identify-main-image" src="img/manifest.png" />
+							<br>
 							<div data-id="identify-manifest-caption" style="font-size: 20px;"><code>.manifest.yaml</code></div>
 						</div>
 						<div class="identify-action-detail">
 							<img src="img/download.png" />
-							<br/>
+							<br>
 							<img src="img/install.png" />
-							<br/>
+							<br>
 							<img src="img/examine.png" />
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Bootstrap Your Containers</h3>
+					<div>
+						<img class="bootstrap-image" src="img/computer.png" />
+						<br>
+						<div data-id="first-terminal" class="terminal-outer">
+							<div class="terminal-container">
+							  <div class="terminal-section terminal-header">
+								<div class="terminal-controls">
+								  <span class="terminal-button terminal-button-tabs"></span>
+								  <span class="terminal-button terminal-button-menu"></span>
+								  <span class="terminal-button terminal-button-close"></span>
+								</div>
+							  </div>
+							  <div class="terminal-section terminal-body">
+								<div class="terminal-section terminal-body-inner">
+								  <p><span class="terminal-user">creator@host:~$</span><span></span></p>
+								</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Bootstrap Your Containers</h3>
+					<div>
+						<img class="bootstrap-image" src="img/computer.png" />
+						<br>
+						<div data-id="first-terminal" class="terminal-outer">
+							<div class="terminal-container">
+							  <div class="terminal-section terminal-header">
+								<div class="terminal-controls">
+								  <span class="terminal-button terminal-button-tabs"></span>
+								  <span class="terminal-button terminal-button-menu"></span>
+								  <span class="terminal-button terminal-button-close"></span>
+								</div>
+							  </div>
+							  <div class="terminal-section terminal-body">
+								<div class="terminal-section terminal-body-inner">
+								  <p><span class="terminal-user">creator@host:~$</span><span id="specs-generate-manifest-type"></span></p>
+								</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Bootstrap Your Containers</h3>
+					<div>
+						<img class="bootstrap-image" src="img/computer.png" />
+						<br>
+						<div data-id="first-terminal" class="terminal-outer">
+							<div class="terminal-container">
+							  <div class="terminal-section terminal-header">
+								<div class="terminal-controls">
+								  <span class="terminal-button terminal-button-tabs"></span>
+								  <span class="terminal-button terminal-button-menu"></span>
+								  <span class="terminal-button terminal-button-close"></span>
+								</div>
+							  </div>
+							  <div class="terminal-section terminal-body">
+								<div class="terminal-section terminal-body-inner">
+								  <p><span id="vi-manifest-type"></span></p>
+								</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Bootstrap Your Containers</h3>
+					<div class="bootstrap-table">
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/computer.png" />
+							<br>
+							<div data-id="first-terminal" class="terminal-outer">
+								<div class="terminal-container">
+								<div data-id="first-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span class="terminal-user">creator@host:~$</span><span>dnf manifest new elinks nudoku<br>Manifest file was successfully generated.<br><span class="terminal-user">creator@host:~$</span>vi packages.manifest.yaml<br><span class="terminal-user">creator@host:~$</span></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/container.png" />
+							<br>
+							<div data-id="second-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span class="terminal-user">builder@client:~$</span><span></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Bootstrap Your Containers</h3>
+					<div class="bootstrap-table">
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/computer.png" />
+							<br>
+							<div data-id="first-terminal" class="terminal-outer">
+								<div class="terminal-container">
+								<div data-id="first-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+										<p><span class="terminal-user">creator@host:~$</span><span>dnf manifest new elinks nudoku<br>Manifest file was successfully generated.<br><span class="terminal-user">creator@host:~$</span>vi packages.manifest.yaml<br><span class="terminal-user">creator@host:~$</span></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/container.png" />
+							<br>
+							<div data-id="second-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span class="terminal-user">builder@client:~$</span><span id="chroot-install-manifest-type"></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Bootstrap Your Containers</h3>
+					<div class="bootstrap-table">
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/computer.png" />
+							<br>
+							<div data-id="first-terminal" class="terminal-outer">
+								<div class="terminal-container">
+								<div data-id="first-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+										<p><span class="terminal-user">creator@host:~$</span><span>dnf manifest new elinks nudoku<br>Manifest file was successfully generated.<br><span class="terminal-user">creator@host:~$</span>vi packages.manifest.yaml<br><span class="terminal-user">creator@host:~$</span></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/container.png" />
+							<br>
+							<div data-id="second-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div data-id="second-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span class="terminal-user">builder@client:~$</span><span>scp creator@host:/packages.manifest.yaml .<br><span class="terminal-user">builder@client:~$</span>dnf manifest install -y --installroot /my/chroot<br>Operation successfully completed!<br><span class="terminal-user">builder@client:~$</span></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+							<br>
+							<div data-id="third-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span id="manifest-container-type"></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Bootstrap Your Containers</h3>
+					<div class="bootstrap-table">
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/computer.png" />
+							<br>
+							<div data-id="first-terminal" class="terminal-outer">
+								<div class="terminal-container">
+								<div class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+										<p><span class="terminal-user">creator@host:~$</span><span id="vi-input-prepare-type"></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/container.png" />
+							<div data-id="second-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div data-id="second-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span class="terminal-user">builder@client:~$</span><span>scp creator@host:/packages.manifest.yaml .<br><span class="terminal-user">builder@client:~$</span>dnf manifest install -y --installroot /my/chroot<br>Operation successfully completed!<br><span class="terminal-user">builder@client:~$</span></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+							<br>
+							<div data-id="third-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div data-id="third-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span>FROM fedora:41<br>COPY packages.manifest.yaml /<br>RUN dnf manifest install</span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Bootstrap Your Containers</h3>
+					<div class="bootstrap-table">
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/computer.png" />
+							<br>
+							<div data-id="first-terminal" class="terminal-outer">
+								<div class="terminal-container">
+								<div class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+										<p><span id="vi-input-type"></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/container.png" />
+							<div data-id="second-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div data-id="second-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span class="terminal-user">builder@client:~$</span><span>scp creator@host:/packages.manifest.yaml .<br><span class="terminal-user">builder@client:~$</span>dnf manifest install -y --installroot /my/chroot<br>Operation successfully completed!<br><span class="terminal-user">builder@client:~$</span></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+							<br>
+							<div data-id="third-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div data-id="third-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span>FROM fedora:41<br>COPY packages.manifest.yaml /<br>RUN dnf manifest install</span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Bootstrap Your Containers</h3>
+					<div class="bootstrap-table">
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/computer.png" />
+							<br>
+							<div data-id="first-terminal" class="terminal-outer">
+								<div class="terminal-container">
+								<div class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+										<p><span class="terminal-user">creator@host:~$</span><span id="input-generate-manifest-type"></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/container.png" />
+							<div data-id="second-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div data-id="second-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span class="terminal-user">builder@client:~$</span><span>scp creator@host:/packages.manifest.yaml .<br><span class="terminal-user">builder@client:~$</span>dnf manifest install -y --installroot /my/chroot<br>Operation successfully completed!<br><span class="terminal-user">builder@client:~$</span></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+							<br>
+							<div data-id="third-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div data-id="third-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span>FROM fedora:41<br>COPY packages.manifest.yaml /<br>RUN dnf manifest install</span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Bootstrap Your Containers</h3>
+					<div class="bootstrap-table">
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/computer.png" />
+							<br>
+							<div data-id="first-terminal" class="terminal-outer">
+								<div class="terminal-container">
+								<div class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+										<p><span class="terminal-user">creator@host:~$</span><span id="system-generate-manifest-type"></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="bootstrap-table-column">
+							<img class="bootstrap-image" src="img/container.png" />
+							<div data-id="second-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div data-id="second-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span class="terminal-user">builder@client:~$</span><span>scp creator@host:/packages.manifest.yaml .<br><span class="terminal-user">builder@client:~$</span>dnf manifest install -y --installroot /my/chroot<br>Operation successfully completed!<br><span class="terminal-user">builder@client:~$</span></span></p>
+									</div>
+								</div>
+								</div>
+							</div>
+							<br>
+							<div data-id="third-terminal" class="terminal-outer terminal-small">
+								<div class="terminal-container">
+								<div data-id="third-terminal-header" class="terminal-section terminal-header">
+									<div class="terminal-controls">
+									<span class="terminal-button terminal-button-tabs"></span>
+									<span class="terminal-button terminal-button-menu"></span>
+									<span class="terminal-button terminal-button-close"></span>
+									</div>
+								</div>
+								<div class="terminal-section terminal-body">
+									<div class="terminal-section terminal-body-inner">
+									<p><span>FROM fedora:41<br>COPY packages.manifest.yaml /<br>RUN dnf manifest install</span></p>
+									</div>
+								</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -288,6 +857,10 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+
+		<!-- Custom scripts -->
+		<script src="custom/typed.js"></script>
+
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -305,6 +878,118 @@
 				} else {
 					document.querySelector('.footer-title').style.display = 'inline';
 				}
+
+				specsGenerateManifestTerminal.stop();
+				chrootInstallManifestTerminal.stop();
+				manifestContainerTerminal.stop();
+				viInputPrepareTerminal.stop();
+				viInputTerminal.stop();
+				inputGenerateManifestTerminal.stop();
+				dumpSystemManifestTerminal.stop();
+
+				if (event.indexh == 6) {
+					specsGenerateManifestTerminal.reset();
+					specsGenerateManifestTerminal.start();
+				}
+
+				if (event.indexh == 9) {
+					chrootInstallManifestTerminal.reset();
+					chrootInstallManifestTerminal.start();
+				}
+
+				if (event.indexh == 10) {
+					manifestContainerTerminal.reset();
+					manifestContainerTerminal.start();
+				}
+
+				if (event.indexh == 11) {
+					viInputPrepareTerminal.reset();
+					viInputPrepareTerminal.start();
+				}
+
+				if (event.indexh == 12) {
+					viInputTerminal.reset();
+					viInputTerminal.start();
+				}
+
+				if (event.indexh == 13) {
+					inputGenerateManifestTerminal.reset();
+					inputGenerateManifestTerminal.start();
+				}
+
+				if (event.indexh == 14) {
+					dumpSystemManifestTerminal.reset();
+					dumpSystemManifestTerminal.start();
+				}
+			});
+
+			var specsGenerateManifestTerminal = new Typed("#specs-generate-manifest-type", {
+				strings: [
+					'^1000dnf manifest new elinks nudoku<br>^300 ' +
+					'`Manifest file was successfully generated.<br><span class="terminal-user">creator@host:~$</span>`' +
+					'^3000vi `packages.manifest.yaml`'
+				],
+				typeSpeed: 40,
+				loop: false
+			});
+
+			var viManifestTerminal = new Typed("#vi-manifest-type", {
+				strings: [
+					'`<span class="keyword-highlight">document</span>: rpm-package-manifest<br><span class="keyword-highlight">version</span>: 0.2.1<br><span class="keyword-highlight">data</span>:<br>&nbsp;&nbsp;<span class="keyword-highlight">repositories</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;- <span class="keyword-highlight">id</span>: fedora<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">metalink</span>: https://mirrors.fedoraproject.org/metalink?repo=fedora-41&arch=$arch<br>&nbsp;&nbsp;<span class="keyword-highlight">packages</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">x86_64</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span class="keyword-highlight">name</span>: elinks<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">repo_id</span>: fedora<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">checksum</span>: sha256:39fb943e88ce7149823f401e971e7ba8bb0169766888dff4e96cb816de4ecb79<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">size</span>: 1044994<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">evr</span>: 0.17.0-5.fc41<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- <span class="keyword-highlight">name</span>: nudoku<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">repo_id</span>: fedora<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">checksum</span>: sha256:35f204378ac484725572596f92fa977a6f04365b434928e718a876711bfffcb2<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">size</span>: 40354<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">evr</span>: 4.0.1-2.fc41`'
+				],
+				typeSpeed: 40,
+				loop: false
+			});
+
+			var chrootInstallManifestTerminal = new Typed("#chroot-install-manifest-type", {
+				strings: [
+					'^1000scp creator@host:/packages.manifest.yaml .<br>`<span class="terminal-user">builder@client:~$</span>`^3000dnf manifest install -y --installroot /my/chroot`<br>Operation successfully completed!<br><span class="terminal-user">builder@client:~$</span>`'
+				],
+				typeSpeed: 40,
+				loop: false
+			});
+
+			var manifestContainerTerminal = new Typed("#manifest-container-type", {
+				strings: [
+					'^1000FROM fedora:41<br>COPY packages.manifest.yaml /<br>RUN dnf manifest install'
+				],
+				typeSpeed: 40,
+				loop: false
+			});
+
+			var viInputPrepareTerminal = new Typed("#vi-input-prepare-type", {
+				strings: [
+					'^1000vi `packages.input.yaml`'
+				],
+				typeSpeed: 40,
+				loop: false
+			});
+
+			var viInputTerminal = new Typed("#vi-input-type", {
+				strings: [
+					'`<span class="keyword-highlight">document</span>: rpm-package-input<br><span class="keyword-highlight">version</span>: 0.0.2<br><span class="keyword-highlight">repositories</span>:<br>&nbsp;&nbsp;- <span class="keyword-highlight">id</span>: fedora<br>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword-highlight">metalink</span>: https://mirrors.fedoraproject.org/metalink?repo=fedora-41&arch=$arch<br><span class="keyword-highlight">packages</span>:<br>&nbsp;&nbsp;<span class="keyword-highlight">install</span>:<br>&nbsp;&nbsp;&nbsp;&nbsp;- elinks<br>&nbsp;&nbsp;&nbsp;&nbsp;- nudoku<br><span class="keyword-highlight">archs</span>:<br>&nbsp;&nbsp;- x86_64`'
+				],
+				typeSpeed: 40,
+				loop: false
+			});
+
+			var inputGenerateManifestTerminal = new Typed("#input-generate-manifest-type", {
+				strings: [
+					'`vi packages.input.yaml<br><span class="terminal-user">creator@host:~$</span>`' +
+					'^3000dnf manifest new<br>^300 ' +
+					'`Manifest file was successfully generated.<br><span class="terminal-user">creator@host:~$</span>`'
+				],
+				typeSpeed: 40,
+				loop: false
+			});
+
+			var dumpSystemManifestTerminal = new Typed("#system-generate-manifest-type", {
+				strings: [
+					'^1000dnf manifest new --use-system<br>^300 ' +
+					'`Manifest file was successfully generated.<br><span class="terminal-user">creator@host:~$</span>`'
+				],
+				typeSpeed: 40,
+				loop: false
 			});
 		</script>
 	</body>
