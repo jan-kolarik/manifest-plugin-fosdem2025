@@ -865,6 +865,57 @@
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
+
+			function stopAllTypingAnimations() {
+				specsGenerateManifestTerminal.stop();
+				chrootInstallManifestTerminal.stop();
+				manifestContainerTerminal.stop();
+				viInputPrepareTerminal.stop();
+				viInputTerminal.stop();
+				inputGenerateManifestTerminal.stop();
+				dumpSystemManifestTerminal.stop();
+			}
+
+			function timeout(ms) {
+				return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
+			async function restartTypingAnimation(terminal) {
+				terminal.reset();
+				await timeout(10);
+				terminal.start();
+			}
+
+			async function startTypingAnimation(slide) {
+				await timeout(10);
+				stopAllTypingAnimations();
+				await timeout(10);
+
+				switch (slide) {
+					case 6:
+						restartTypingAnimation(specsGenerateManifestTerminal);
+						break;
+					case 9:
+						restartTypingAnimation(chrootInstallManifestTerminal);
+						break;
+					case 10:
+						restartTypingAnimation(manifestContainerTerminal);
+						break;
+					case 11:
+						restartTypingAnimation(viInputPrepareTerminal);
+						break;
+					case 12:
+						restartTypingAnimation(viInputTerminal);
+						break;
+					case 13:
+						restartTypingAnimation(inputGenerateManifestTerminal);
+						break;
+					case 14:
+						restartTypingAnimation(dumpSystemManifestTerminal);
+						break;
+				}
+			}
+
 			Reveal.initialize({
 				hash: true,
 
@@ -879,48 +930,7 @@
 					document.querySelector('.footer-title').style.display = 'inline';
 				}
 
-				specsGenerateManifestTerminal.stop();
-				chrootInstallManifestTerminal.stop();
-				manifestContainerTerminal.stop();
-				viInputPrepareTerminal.stop();
-				viInputTerminal.stop();
-				inputGenerateManifestTerminal.stop();
-				dumpSystemManifestTerminal.stop();
-
-				if (event.indexh == 6) {
-					specsGenerateManifestTerminal.reset();
-					specsGenerateManifestTerminal.start();
-				}
-
-				if (event.indexh == 9) {
-					chrootInstallManifestTerminal.reset();
-					chrootInstallManifestTerminal.start();
-				}
-
-				if (event.indexh == 10) {
-					manifestContainerTerminal.reset();
-					manifestContainerTerminal.start();
-				}
-
-				if (event.indexh == 11) {
-					viInputPrepareTerminal.reset();
-					viInputPrepareTerminal.start();
-				}
-
-				if (event.indexh == 12) {
-					viInputTerminal.reset();
-					viInputTerminal.start();
-				}
-
-				if (event.indexh == 13) {
-					inputGenerateManifestTerminal.reset();
-					inputGenerateManifestTerminal.start();
-				}
-
-				if (event.indexh == 14) {
-					dumpSystemManifestTerminal.reset();
-					dumpSystemManifestTerminal.start();
-				}
+				startTypingAnimation(event.indexh);
 			});
 
 			var specsGenerateManifestTerminal = new Typed("#specs-generate-manifest-type", {
@@ -991,6 +1001,8 @@
 				typeSpeed: 40,
 				loop: false
 			});
+
+			stopAllTypingAnimations();
 		</script>
 	</body>
 </html>
