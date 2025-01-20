@@ -286,6 +286,49 @@
 			.terminal-small {
 				height: 140px;
 			}
+
+			.workflow-grid {
+				display: grid;
+				place-items: center;
+				grid-template-columns: 1fr 0.3fr repeat(5, 1fr);
+				grid-template-rows: repeat(1, auto);
+				border-radius: 35px;
+				background: #f5f5f5;
+				height: 200px;
+			}
+
+			.workflow-image {
+				margin-right: 40px !important;
+			}
+
+			.workflow-context-image {
+				width: 100px; 
+			}
+
+			#workflow-arrow {
+				margin-top: -40px;
+			}
+
+			.workflow-context-separator {
+				justify-self: start;
+			}
+
+			.workflow-maintainer-context-cell {
+				border-radius: 35px;
+				background: #E9F1FD;
+				padding: 10px
+			}
+
+			.workflow-builder-context-cell {
+				border-radius: 35px;
+				background: #FDF5E9;
+				padding: 10px
+			}
+
+			.share-image {
+				width: 100px;
+				margin: 30px !important;
+			}
 		</style>
 	</head>
 	<body>
@@ -849,6 +892,75 @@
 							</div>
 						</div>
 					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Build Your Environments</h3>
+				</section>
+				<section data-auto-animate>
+					<h3>Build Your Environments</h3>
+					<div data-id="workflow-maintainer-grid" class="workflow-grid">
+						<div class="workflow-maintainer-context-cell">
+							<img class="workflow-context-image" src="img/user.png" />
+						</div>
+						<div></div>
+						<div>
+							<img class="workflow-image" src="img/input.png" />
+						</div>
+						<div data-id="workflow-arrow" class="workflow-arrow">⟶</div>
+						<div>
+							<img class="workflow-image" src="img/manifest.png" />
+						</div>
+						<div data-id="workflow-arrow" class="workflow-arrow">⟶</div>
+						<div>
+							<img class="workflow-image" src="img/database.png" />
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Build Your Environments</h3>
+					<div data-id="workflow-maintainer-grid" class="workflow-grid">
+						<div class="workflow-maintainer-context-cell">
+							<img class="workflow-context-image" src="img/user.png" />
+						</div>
+						<div></div>
+						<div>
+							<img class="workflow-image" src="img/input.png" />
+						</div>
+						<div data-id="workflow-arrow" class="workflow-arrow">⟶</div>
+						<div>
+							<img class="workflow-image" src="img/manifest.png" />
+						</div>
+						<div data-id="workflow-arrow" class="workflow-arrow">⟶</div>
+						<div>
+							<img class="workflow-image" src="img/database.png" />
+						</div>
+					</div>
+					<br>
+					<div data-id="workflow-builder-grid" class="workflow-grid">
+						<div class="workflow-builder-context-cell">
+							<img class="workflow-context-image" src="img/automatic.png" />
+						</div>
+						<div></div>
+						<div>
+							<img class="workflow-image" src="img/podman.png" />
+						</div>
+						<div class="workflow-arrow">⟵</div>
+						<div>
+							<img class="workflow-image" src="img/repository.png" />
+						</div>
+						<div class="workflow-arrow">⟵</div>
+						<div>
+							<img class="workflow-image" src="img/download2.png" />
+						</div>
+					</div>
+				</section>
+				<section data-auto-animate>
+					<h3>Share Your Use Cases</h3>
+					<img class="share-image" src="img/chat.png" />
+					<img class="share-image" src="img/ask.png" />
+					<a href="https://github.com/rpm-software-management/libpkgmanifest" target="_blank">
+						<img class="share-image" src="img/github.png" />
+					</a>
 				</section>
 			</div>
 		</div>
