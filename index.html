@@ -1047,7 +1047,7 @@
 
 			var specsGenerateManifestTerminal = new Typed("#specs-generate-manifest-type", {
 				strings: [
-					'^1000dnf manifest new elinks nudoku<br>^300 ' +
+					'dnf manifest new elinks nudoku<br>^300 ' +
 					'`Manifest file was successfully generated.<br><span class="terminal-user">creator@host:~$</span>`' +
 					'^3000vi `packages.manifest.yaml`'
 				],
@@ -1065,7 +1065,7 @@
 
 			var chrootInstallManifestTerminal = new Typed("#chroot-install-manifest-type", {
 				strings: [
-					'^1000scp creator@host:/packages.manifest.yaml .<br>`<span class="terminal-user">builder@client:~$</span>`^3000dnf manifest install -y --installroot /my/chroot`<br>Operation successfully completed!<br><span class="terminal-user">builder@client:~$</span>`'
+					'scp creator@host:/packages.manifest.yaml .<br>`<span class="terminal-user">builder@client:~$</span>`^1000dnf manifest install -y --installroot /my/chroot`<br>Operation successfully completed!<br><span class="terminal-user">builder@client:~$</span>`'
 				],
 				typeSpeed: 40,
 				loop: false
@@ -1098,7 +1098,7 @@
 			var inputGenerateManifestTerminal = new Typed("#input-generate-manifest-type", {
 				strings: [
 					'`vi packages.input.yaml<br><span class="terminal-user">creator@host:~$</span>`' +
-					'^3000dnf manifest new<br>^300 ' +
+					'^1000dnf manifest new<br>^300 ' +
 					'`Manifest file was successfully generated.<br><span class="terminal-user">creator@host:~$</span>`'
 				],
 				typeSpeed: 40,
@@ -1107,7 +1107,7 @@
 
 			var dumpSystemManifestTerminal = new Typed("#system-generate-manifest-type", {
 				strings: [
-					'^1000dnf manifest new --use-system<br>^300 ' +
+					'dnf manifest new --use-system<br>^300 ' +
 					'`Manifest file was successfully generated.<br><span class="terminal-user">creator@host:~$</span>`'
 				],
 				typeSpeed: 40,
